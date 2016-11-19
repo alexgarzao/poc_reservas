@@ -43,3 +43,10 @@ Para executar este projeto, os seguintes passos são necessários:
 * pip install -r requirements.txt
 
 * ...
+
+Para um teste rápido, basta executar o comando abaixo:
+
+* curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/
+
+Ou, ainda, acessar o browser em http://127.0.0.1:8000/users/
+

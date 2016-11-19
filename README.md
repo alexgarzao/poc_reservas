@@ -25,3 +25,21 @@ Como é uma POC, várias coisas NÃO serão abordadadas. Entre elas:
 * Controle de clientes dos estabelecimentos
 
 * CRUD completo dos dado. Por exemplo, eu consigo inserir itens, mas não consigo alterá-los e nem excluí-los
+
+
+## Para executar este projeto
+Para executar este projeto, os seguintes passos são necessários:
+
+* cd <MEUS_PROJETOS>
+
+* git clone https://github.com/alexgarzao/poc_reservas.git
+
+* cd poc_reservas
+
+* virtualenv .env
+
+* source .env/bin/active
+
+* pip install -r requirements.txt
+
+* ...

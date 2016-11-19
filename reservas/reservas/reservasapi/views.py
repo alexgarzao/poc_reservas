@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from reservas.reservasapi.serializers import UserSerializer, GroupSerializer
+from reservas.reservasapi.serializers import UserSerializer, GroupSerializer, MerchantSerializer, MerchantItemSerializer
+from reservas.reservasapi.models import Merchant, MerchantItem
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -18,3 +19,19 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class MerchantViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows merchants to be viewed or edited.
+    """
+    queryset = Merchant.objects.all()
+    serializer_class = MerchantSerializer
+
+
+class MerchantItemViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows items to be viewed or edited.
+    """
+    queryset = MerchantItem.objects.all()
+    serializer_class = MerchantItemSerializer
